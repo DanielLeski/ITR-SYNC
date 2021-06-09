@@ -20,4 +20,5 @@
     - Grab ITR number from "INV" (ACCESS DATA)
       - grab that column and save it to a seperate dataframe to use for comparison
       - Take the original "ITR" and for now do a simple comparison with "InternalID" 
-  
+  - Buckley:
+    - Make sure ITR and InternalID number are the same and at that point check the serial numbers
