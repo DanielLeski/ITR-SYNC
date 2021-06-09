@@ -22,3 +22,14 @@
       - Take the original "ITR" and for now do a simple comparison with "InternalID" 
   - Buckley:
     - Make sure ITR and InternalID number are the same and at that point check the serial numbers
+
+## Process:
+- When there is a matching set of ITR and InternalID 
+  - We check if the serial numbers are the same both ends
+    - If they are not the same then we create a new dataframe that we place that in with the index number
+    - Then we merge the Access data with the updated Serial numbers from the new dataframe and merge.
+    - After merge we double check if everything is correct and upload it to ITR
+
+
+### Ideas: 
+- Check if the ITR Numbers are the same and then check if the serial numbers are the same in both spots and keep going. 
