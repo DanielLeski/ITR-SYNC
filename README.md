@@ -13,5 +13,11 @@
     - Get all the dependencies installed and the proper libraries
 
 - Things to look out for when comparing both of the CSV files
-  - These can be specific columns or ID numbers that we can see if they changed
-  - Show ones that were added
+  - Format 1 :
+    - These can be specific columns or ID numbers that we can see if they changed
+    - Show ones that were added
+  - Format 2 : 
+    - Grab ITR number from "INV" (ACCESS DATA)
+      - grab that column and save it to a seperate dataframe to use for comparison
+    - Take the original "ITR" and for now do a simple comparison with "InternalID" 
+  
