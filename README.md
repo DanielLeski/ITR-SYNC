@@ -19,5 +19,5 @@
   - Format 2 : 
     - Grab ITR number from "INV" (ACCESS DATA)
       - grab that column and save it to a seperate dataframe to use for comparison
-    - Take the original "ITR" and for now do a simple comparison with "InternalID" 
+      - Take the original "ITR" and for now do a simple comparison with "InternalID" 
   
