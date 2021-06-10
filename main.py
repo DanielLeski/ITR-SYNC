@@ -16,9 +16,13 @@ def fix_NaN(inventory, ITR):
 
 
 def main():
-  inv = pd.read_csv("Inventory.csv")
-  itr = pd.read_csv("Hardware.KitchenSink.csv")
- #itr = pd.read_csv("Hardware.csv")
+  print("Enter the path of where the main Inventory CSV is located")
+  main_inv = input()
+  print("Enter the path of where the ITR Hardware Kitchen sink is located")
+  main_itr = input()
+  inv = pd.read_csv(main_inv)
+  #itr = pd.read_csv("Hardware.KitchenSink.csv")
+  itr = pd.read_csv(main_itr)
 
   fix_NaN(inv, itr)
 
@@ -59,7 +63,7 @@ def main():
       correct = correct + 1
 
   print("Rewriting the ITR data")
-  itr.to_csv("Hardware.KitchenSink.csv", encoding='utf-8')
+  itr.to_csv("Hardware.csv", encoding='utf-8')
   print("How many matches were found within ITR and InteralID #'s : ", found)
   print("The amount of serial numbers that are not the same between Access and ITR", error)
   print("The amount of serial numbers that are the same between Access and ITR", correct)
