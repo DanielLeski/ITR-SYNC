@@ -11,7 +11,7 @@ def fix_NaN(inventory, ITR):
   
   #ITR Checks
   ITR.fillna(0, inplace=True)
- # ITR['InteranlID'] = ITR['InternalID'].astype(int)
+
 
 
 
@@ -25,17 +25,34 @@ def main():
   ITRDB = itr['InternalID'].astype(str)
  
   # add getting the serial columns from each one
-  found = 0
+  serial_number_access = inv['Serial']
+  serial_number_ITR = itr['SerialNumber']
 
-  print(access.dtypes)
-  print(ITRDB.dtypes)
+
+  # getting the number of found when comparing both files
+  found = 0
+  
+  access_index = []
+  ITR_index = []
 
   for i, r1 in enumerate(access.values):
     for j, r2  in enumerate(ITRDB.values):
       if r1 == r2:
-       found = found + 1
-       print(r1, r2)
-  print(found)
+        found = found + 1
+        print(i, r1, " ", j, r2)
+        access_index.append(i)
+        ITR_index.append(j)
+  
+
+
+
+ # for m in access_index:
+  #  for k in ITR_index:
+   #   print(m, k)
+
+
+  print("How many matches were found within ITR and InteralID #'s : ", found)
+
 
 
 if __name__ == "__main__":
