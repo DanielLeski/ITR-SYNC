@@ -42,8 +42,13 @@ def main():
         print(i, r1, " ", j, r2)
         access_index.append(i)
         ITR_index.append(j)
-  
+   
 
+  for k :
+    v1 = seriaL_number_access.get_value(k)
+    v2 = serial_number_ITR.get_value(k)
+    print(v1, v2)
+      
 
 
  # for m in access_index:
