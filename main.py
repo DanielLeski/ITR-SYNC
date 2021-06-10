@@ -42,22 +42,25 @@ def main():
         print(i, r1, " ", j, r2)
         access_index.append(i)
         ITR_index.append(j)
-   
+  
+  error = 0
+  correct = 0
+  for l in range(len(access_index)):
+    i1 = access_index[l]
+    i2 = ITR_index[l]
+    v1 = serial_number_access.iloc[i1]
+    v2 = serial_number_ITR.iloc[i2]
+    if v1 != v2:
+      error = error + 1
+      itr.iloc[i2, itr.columns.get_loc('SerialNumber')] = v1
+    elif v1 == v2:
+      correct = correct + 1
 
-  for k :
-    v1 = seriaL_number_access.get_value(k)
-    v2 = serial_number_ITR.get_value(k)
-    print(v1, v2)
-      
-
-
- # for m in access_index:
-  #  for k in ITR_index:
-   #   print(m, k)
-
-
+  print("Rewriting the ITR data")
+  #itr.to_csv("Hardware.KitchenSink.csv", encoding='utf-8')
   print("How many matches were found within ITR and InteralID #'s : ", found)
-
+  print("The amount of serial numbers that are not the same between Access and ITR", error)
+  print("The amount of serial numbers that are the same between Access and ITR", correct)
 
 
 if __name__ == "__main__":

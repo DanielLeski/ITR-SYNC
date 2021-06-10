@@ -25,7 +25,7 @@
 
 ## Process:
 - When there is a matching set of ITR and InternalID 
-  - We check if the serial numbers are the same both ends
+  - We check if the serial numbers are the same both ends (using indexes from the dataframe to judge what serial numbers we are using to compare)
     - If they are not the same then we create a new dataframe that we place that in with the index number
     - Then we merge the Access data with the updated Serial numbers from the new dataframe and merge.
     - After merge we double check if everything is correct and upload it to ITR
