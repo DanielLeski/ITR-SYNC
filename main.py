@@ -12,9 +12,6 @@ def fix_NaN(inventory, ITR):
   #ITR Checks
   ITR.fillna(0, inplace=True)
 
-
-
-
 def main():
   print("Enter the path of where the main Inventory CSV is located")
   main_inv = input()
