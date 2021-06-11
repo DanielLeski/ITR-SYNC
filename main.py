@@ -6,10 +6,16 @@ import wget
 import requests
 from google_drive_downloader import GoogleDriveDownloader as gdd
 
-csv = gdd.download_file_from_google_drive(file_id="13xlzVyC3uk9WEg0SoJwIvkM_HsSVV6pY",
-                                          dest_path="/Users/smol/fun/ITR_ACCESS/Hardware.KitchenSink.csv",
-                                          showsize=True,
-                                          overwrite=True)
+#csv = gdd.download_file_from_google_drive(file_id="13xlzVyC3uk9WEg0SoJwIvkM_HsSVV6pY",
+#                                          dest_path="/Users/smol/fun/ITR_ACCESS/Hardware.KitchenSink.csv",
+ #                                         showsize=True,
+  #                                        overwrite=True)
+
+
+#inv = gg.download_file_from_google_drive(file_id="",
+ #                                       dest_path = ""
+  #                                      showsize=True
+   #                                     overwrite=True)
 
 
 def fix_NaN(inventory, ITR):
@@ -69,7 +75,7 @@ def main():
       correct = correct + 1
 
   print("Rewriting the ITR data")
-  itr.to_csv("Hardware.KitchenSink.csv", index=False, encoding='utf-8')
+  itr.to_csv("Hardware.KitchenSink.20210610.csv", index=False, encoding='utf-8')
   print("How many matches were found within ITR and InteralID #'s : ", found)
   print("The amount of serial numbers that are not the same between Access and ITR", error)
   print("The amount of serial numbers that are the same between Access and ITR", correct)
