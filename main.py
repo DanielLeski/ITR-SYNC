@@ -7,7 +7,7 @@ import requests
 from google_drive_downloader import GoogleDriveDownloader as gdd
 
 csv = gdd.download_file_from_google_drive(file_id="13xlzVyC3uk9WEg0SoJwIvkM_HsSVV6pY",
-                                          dest_path="/Users/smol/fun/ITR_ACCESS/Hardware                                          KitchenSink.csv",
+                                          dest_path="/Users/smol/fun/ITR_ACCESS/Hardware.KitchenSink.csv",
                                           showsize=True,
                                           overwrite=True)
 
