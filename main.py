@@ -54,11 +54,12 @@ def main():
 
   for i, r1 in enumerate(access.values):
     for j, r2  in enumerate(ITRDB.values):
-      if r1 == r2:
+     if r1 == r2:
         found = found + 1
-        print(i, r1, " ", j, r2)
+        #print(i, r1, " ", j, r2)
         access_index.append(i)
         ITR_index.append(j)
+
   
   error = 0
   correct = 0
@@ -75,7 +76,7 @@ def main():
       correct = correct + 1
 
   print("Rewriting the ITR data")
-  itr.to_csv("Hardware.KitchenSink.20210610.csv", index=False, encoding='utf-8')
+  itr.to_csv("Hardware.KitchenSink.csv", index=False, encoding='utf-8')
   print("How many matches were found within ITR and InteralID #'s : ", found)
   print("The amount of serial numbers that are not the same between Access and ITR", error)
   print("The amount of serial numbers that are the same between Access and ITR", correct)
