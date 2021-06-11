@@ -2,6 +2,8 @@ import numpy as np
 import pandas as pd
 import time
 import sys
+import wget
+import requests
 
 def fix_NaN(inventory, ITR):
   #Iventory checks
@@ -60,7 +62,7 @@ def main():
       correct = correct + 1
 
   print("Rewriting the ITR data")
-  itr.to_csv("Hardware.csv", encoding='utf-8')
+  itr.to_csv("Hardware.KitchenSink.csv", index=False, encoding='utf-8')
   print("How many matches were found within ITR and InteralID #'s : ", found)
   print("The amount of serial numbers that are not the same between Access and ITR", error)
   print("The amount of serial numbers that are the same between Access and ITR", correct)

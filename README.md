@@ -22,6 +22,8 @@
       - Take the original "ITR" and for now do a simple comparison with "InternalID" 
   - Buckley:
     - Make sure ITR and InternalID number are the same and at that point check the serial numbers
+  - Be able to fetch the file from using a url.
+    - Library googledrivedownloader to get file id and dest_path
 
 ## Process:
 - When there is a matching set of ITR and InternalID 
