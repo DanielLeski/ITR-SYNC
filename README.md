@@ -24,7 +24,8 @@
     - Make sure ITR and InternalID number are the same and at that point check the serial numbers
   - Be able to fetch the file from using a url.
     - Library googledrivedownloader to get file id and dest_path
-
+- Add error checking for ITR numbers if they are blank then skip them
+  - if the ITR numbers are blank then we don't add them to the list of changes 
 ## Process:
 - Downloads the files from google drive
   - If need be update the file_id to get the proper file from the "Junk" folder from google drive
