@@ -40,3 +40,4 @@
 
 ### Ideas: 
 - Check if the ITR Numbers are the same and then check if the serial numbers are the same in both spots and keep going. 
+- Read excel file into a dataframe and then convert it into a csv to use for the comparison script
