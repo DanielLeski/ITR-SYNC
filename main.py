@@ -4,7 +4,6 @@ from google_drive_downloader import GoogleDriveDownloader as gdd
 import sys
 import platform
 
-
 #getting the os 
 os_name = platform.system()
 
@@ -53,6 +52,8 @@ def main():
  # main_itr = input()
   inv = pd.read_csv("Inventory.csv")
   itr = pd.read_csv("Hardware.KitchenSink.csv")
+  
+  print("\n")
 
   fix_NaN(inv, itr)
 
@@ -72,11 +73,10 @@ def main():
 
   for i, r1 in enumerate(access.values):
     for j, r2  in enumerate(ITRDB.values):
-     if r1 != r1:
-        print(r1, " ", r2)
-     if r1 == r2:
+     if len(r1) == 0:
+      pass 
+     elif r1 == r2:
         found = found + 1
-       # print(i, r1, " ", j, r2)
         access_index.append(i)
         ITR_index.append(j)
 
@@ -90,12 +90,13 @@ def main():
     v2 = serial_number_ITR.iloc[i2]
     if v1 != v2:
       error = error + 1
-      #print(i1, v1, " ",  i2, v2)
-      print(v2)
       itr.iloc[i2, itr.columns.get_loc('SerialNumber')] = v1
+      print("Check the ITR and InternalID numbers for these Serial numbers, they seem to be wrong, blank, and or don't match with anything within the Hardware KitchenSink data : \n")
+      print(v1, " ", v2)
     elif v1 == v2:
       correct = correct + 1
-
+  
+  print("\n")
   print("Rewriting the ITR data")
   itr.to_csv("Hardware.KitchenSink.csv", index=False, encoding='utf-8')
   print("How many matches were found within ITR and InteralID #'s : ", found)
