@@ -1,10 +1,7 @@
 import numpy as np
 import pandas as pd
-import time
-import sys
-import wget
-import requests
 from google_drive_downloader import GoogleDriveDownloader as gdd
+
 
 csv = gdd.download_file_from_google_drive(file_id="13xlzVyC3uk9WEg0SoJwIvkM_HsSVV6pY",
                                           dest_path="/home/smooth/fun/ITR_ACCESS/Hardware.KitchenSink.csv",
@@ -27,7 +24,6 @@ def fix_NaN(inventory, ITR):
   ITR.fillna(0, inplace=True)
 
 def main():
-  convertion()
   print("Enter the path of where the main Inventory CSV is located")
   main_inv = input()
   print("Enter the path of where the ITR Hardware Kitchen sink is located")
