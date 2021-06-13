@@ -91,6 +91,7 @@ def main():
     if v1 != v2:
       error = error + 1
       itr.iloc[i2, itr.columns.get_loc('SerialNumber')] = v1
+
       print("Check the ITR and InternalID numbers for these Serial numbers, they seem to be wrong, blank, and or don't match with anything within the Hardware KitchenSink data : \n")
       print(v1, " ", v2)
     elif v1 == v2:
@@ -99,6 +100,7 @@ def main():
   print("\n")
   print("Rewriting the ITR data")
   itr.to_csv("Hardware.KitchenSink.csv", index=False, encoding='utf-8')
+  itr.to_csv("ITR_SCRIPT.csv", index=False, encoding='utf-8')
   print("How many matches were found within ITR and InteralID #'s : ", found)
   print("The amount of serial numbers that are not the same between Access and ITR", error)
   print("The amount of serial numbers that are the same between Access and ITR", correct)
