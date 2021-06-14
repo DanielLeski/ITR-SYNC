@@ -37,3 +37,16 @@
     - If they are not the same then we create a new dataframe that we place that in with the index number
     - Then we merge the Access data with the updated Serial numbers from the new dataframe and merge.
     - After merge we double check if everything is correct and upload it to ITR
+## Loaner Process: JavaScript
+- Loaners (Chromebooks) soon chargers 
+  - Bar code / Serial Number/ User ID #
+  - Date of giving said device (check in and check out)
+- Repairs
+  - Bar code / Serial Number / User ID #
+  - What issue is the chromebook having?
+    - Power
+    - Network
+    - Input
+    - Physical damage
+  - Date of of check in and Date of check out
+  - include aaron somewhere for blame reasons 
