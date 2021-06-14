@@ -5,38 +5,19 @@ import sys
 import platform
 import json
 import csv
-from itertools import zip_longest
 
 
-#getting the os 
 os_name = platform.system()
 
 if os_name == "Darwin":
   csvgdd = gdd.download_file_from_google_drive(file_id="13xlzVyC3uk9WEg0SoJwIvkM_HsSVV6pY",
-                                          dest_path="/Users/smol/fun/ITR_ACCESS/Hardware.KitchenSink.csv",
-                                          showsize=True,
-                                          overwrite=True)
+  dest_path="/Users/smol/fun/ITR_ACCESS/Hardware.KitchenSink.csv",
+  showsize=True,
+  overwrite=True)
+else:
+  print("What you running foo!")
 
 
-  #inv = gdd.download_file_from_google_drive(file_id="1hLU-0F9N1xhMPZ1wD4aAUT2Jx0p82dZB",
-      #                                    dest_path = "/Users/smol/fun/ITR_ACCESS/Inventory.xlsx",
-    #                                      showsize=True,
-     #                                     overwrite=True)
-#elif os_name == "Linux":
-#  csv = gdd.download_file_from_google_drive(file_id="13xlzVyC3uk9WEg0SoJwIvkM_HsSVV6pY",
-       #                                   dest_path="/home/smooth/fun/ITR_ACCESS/Hardware.KitchenSink.csv",
-        #                                  showsize=True,
-         #                                 overwrite=True)
-
-
- # inv = gdd.download_file_from_google_drive(file_id="1hLU-0F9N1xhMPZ1wD4aAUT2Jx0p82dZB",
-          #                                dest_path = "/home/smooth/fun/ITR_ACCESS/Inventory.xlsx",
-           #                               showsize=True,
-            #                              overwrite=True)
-
-#else:
- # print("NO OS RE")
-  
 def fix_NaN(inventory, ITR):
   #Iventory checks
   inventory.fillna(0, inplace=True)
