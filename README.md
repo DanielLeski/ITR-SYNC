@@ -1,6 +1,6 @@
 # ITR_ACCESS
 
-## TODO:
+## TODO/Planning:
 - Get the cvs files properly loaded into a dataframe
   - Get all of the columns to be correctly shown
 
