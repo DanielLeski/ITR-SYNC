@@ -48,69 +48,69 @@ def loop_tab():
   i = 0
   while i < 11:
     p.press('tab')
-    t.sleep(2)
+    t.sleep(3)
     i = i + 1
 
 def loopy():
     i = 0
     while i < 8:
         p.press('tab')
-        t.sleep(2)
+        t.sleep(3)
         i = i + 1
 
 def loopy_end():
     i = 0
     while i < 9:
         p.press('tab')
-        t.sleep(2)
+        t.sleep(3)
         i = i + 1
 
 
 def main():
-    t.sleep(10)
+    t.sleep(20)
     i = 0
     while i < 200:
        copy()
        t.sleep(2)
        press_command_once()
-       t.sleep(1)
+       t.sleep(2)
        paste()
-       t.sleep(1)
+       t.sleep(2)
        press_tab()
-       t.sleep(1)
+       t.sleep(2)
        enter_press()
-       t.sleep(1)
+       t.sleep(2)
        loop_tab()
-       t.sleep(1)
+       t.sleep(2)
        enter_press()
-       t.sleep(1)
+       t.sleep(2)
        press_tab()
-       t.sleep(1)
+       t.sleep(2)
        press_tab()
-       t.sleep(1)
+       t.sleep(2)
        selectAll_and_delete()
-       t.sleep(1)
+       t.sleep(2)
        press_command_once()
-       t.sleep(1)
+       t.sleep(2)
        kb.press(Key.left)
        copy()
-       t.sleep(1)
+       t.sleep(2)
        press_command_once()
-       t.sleep(1)
+       t.sleep(2)
        paste()
-       t.sleep(1)
+       t.sleep(2)
        loopy()
-       t.sleep(1)
+       t.sleep(2)
        enter_press()
-       t.sleep(1)
+       t.sleep(2)
        loopy_end()
-       t.sleep(1)
+       t.sleep(2)
        press_command_once()
-       t.sleep(1)
+       t.sleep(2)
        kb.press(Key.right)
-       t.sleep(1)
+       t.sleep(2)
        kb.press(Key.right)
-       t.sleep(1)
+       t.sleep(2)
        kb.type('done')
        down_key()
        kb.press(Key.left)
