@@ -101,7 +101,7 @@ def main():
 
   
   # Creating the final change log which gives the proper ITR and correct Serial Number from the 'Inventory.csv'
-  d = {'ITR': index, 'NewSerialNumbers': values, 'OldSerialNumbers': old_itr}
+  d = {'ITR': index, 'SerialNumbers': values}
   log = pd.DataFrame(d)
   log.to_csv('log.csv', index=False, encoding='utf-8')
  
