@@ -1,3 +1,7 @@
+"""
+This is the script for the new chromebooks
+"""
+
 import pyautogui as p
 import time as t 
 import keyboard 
