@@ -139,13 +139,14 @@ def main():
         enter_press()
         t.sleep(1)
         #scroll down to the "Intructional Classroom" option
-        kb.press(Key.down)
-        t.sleep(1)
-        kb.press(Key.down)
-        t.sleep(1)
-        kb.press(Key.down)
-        t.sleep(1)
-        enter_press()
+        if i == 0:
+            kb.press(Key.down)
+            t.sleep(1)
+            kb.press(Key.down)
+            t.sleep(1)
+            kb.press(Key.down)
+            t.sleep(1)
+            enter_press()
         t.sleep(1)
         # tabs to get to the add item
         press_tab()
@@ -160,6 +161,7 @@ def main():
         t.sleep(1)
         enter_press()
         t.sleep(1)
+        press_command_once()
         i = i + 1
 
 if __name__ == '__main__':	
