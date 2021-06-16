@@ -1,3 +1,7 @@
+"""
+Main script to find differences between data 
+"""
+
 import numpy as np
 import pandas as pd
 from google_drive_downloader import GoogleDriveDownloader as gdd
