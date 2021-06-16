@@ -136,10 +136,10 @@ def main():
         press_tab()
         t.sleep(1)
         #select "Use case" 
-        enter_press()
-        t.sleep(1)
-        #scroll down to the "Intructional Classroom" option
         if i == 0:
+            enter_press()
+            t.sleep(1)
+            #scroll down to the "Intructional Classroom" option
             kb.press(Key.down)
             t.sleep(1)
             kb.press(Key.down)
