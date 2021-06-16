@@ -1,3 +1,6 @@
+"""
+This script is being used to take information from the Inventory.csv and then move it to ITR
+"""
 import pyautogui as p
 import time as t 
 import keyboard 
