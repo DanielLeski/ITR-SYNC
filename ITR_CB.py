@@ -65,57 +65,87 @@ def loopy_end():
         t.sleep(2)
         i = i + 1
 
-
+"""
+Start your cursor on the ITR label
+"""
 def main():
     t.sleep(10)
     i = 0
-    while i < 200:
-       copy()
-       t.sleep(2)
-       press_command_once()
-       t.sleep(1)
-       paste()
-       t.sleep(1)
-       press_tab()
-       t.sleep(1)
-       enter_press()
-       t.sleep(1)
-       loop_tab()
-       t.sleep(1)
-       enter_press()
-       t.sleep(1)
-       press_tab()
-       t.sleep(1)
-       press_tab()
-       t.sleep(1)
-       selectAll_and_delete()
-       t.sleep(1)
-       press_command_once()
-       t.sleep(1)
-       kb.press(Key.left)
-       copy()
-       t.sleep(1)
-       press_command_once()
-       t.sleep(1)
-       paste()
-       t.sleep(1)
-       loopy()
-       t.sleep(1)
-       enter_press()
-       t.sleep(1)
-       loopy_end()
-       t.sleep(1)
-       press_command_once()
-       t.sleep(1)
-       kb.press(Key.right)
-       t.sleep(1)
-       kb.press(Key.right)
-       t.sleep(1)
-       kb.type('done')
-       down_key()
-       kb.press(Key.left)
-       i = i + 1
-
+    while i < 600:
+        #waiting for ITR add item to load
+        #copy ITR
+        copy()
+        t.sleep(1)
+        #switch over to the ITR screen
+        press_command()
+        t.sleep(1)
+        #select everything thats in the field
+        selectAll_and_delete()
+        t.sleep(1)
+        #paste
+        paste()
+        t.sleep(1)
+        #press tab
+        press_tab()
+        t.sleep(1)
+        #switch over to the Excel screen
+        press_command()
+        t.sleep(1)
+        #move to the Serial tab
+        kb.press(Key.right)
+        t.sleep(1)
+        #copy the serial tab
+        copy()
+        t.sleep(1)
+        #switch over to the ITR screen
+        press_command()
+        t.sleep(1)
+        #paste the Serial number into the Serial field
+        paste()
+        t.sleep(1)
+        #press tab to go to the location
+        press_tab()
+        t.sleep(1)
+        #go back to the Excel screen
+        press_command()
+        t.sleep(1)
+        #go to the Student ID
+        kb.press(Key.left)
+        kb.press(key.left)
+        t.sleep(1)
+        #copy the student ID for the location
+        copy()
+        t.sleep(1)
+        #go back to the ITR screen
+        press_command()
+        t.sleep(1)
+        #paste the Student ID in the location Field 
+        paste()
+        t.sleep(1)
+        #skip over the Status 
+        press_tab()
+        press_tab()
+        t.sleep(1)
+        #select "Use case" 
+        enter_press()
+        t.sleep(1)
+        #scroll down to the "Intructional Classroom" option
+        kb.press(Key.down)
+        kb.press(Key.down)
+        kb.press(Key.down)
+        t.sleep(1)
+        enter_press()
+        t.sleep(1)
+        # tabs to get to the add item
+        press_tab()
+        press_tab()
+        press_tab()
+        press_tab()
+        press_tab()
+        t.sleep(1)
+        enter_press()
+        t.sleep(1)
+        i = i + 1
 
 if __name__ == '__main__':
     main()
