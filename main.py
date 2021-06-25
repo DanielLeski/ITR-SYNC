@@ -7,7 +7,6 @@ import pandas as pd
 from google_drive_downloader import GoogleDriveDownloader as gdd
 import sys
 import platform
-import json
 import csv
 
 

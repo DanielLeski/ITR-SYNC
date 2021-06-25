@@ -2,7 +2,9 @@
 
 ## TODO/Planning:
 - Add error checking for ITR numbers if they are blank then skip them
-  - if the ITR numbers are blank then we don't add them to the list of changes 
+  - if the ITR numbers are blank then we don't add them to the list of changes
+- Use mapping instead of array indexing
+- Add sql removal and addiiton of other records and etc
 ## Process:
 - Downloads the files from google drive
   - If need be update the file_id to get the proper file from the "Junk" folder from google drive
@@ -14,3 +16,4 @@
     - If they are not the same then we create a new dataframe that we place that in with the index number
     - Then we merge the Access data with the updated Serial numbers from the new dataframe and merge.
     - After merge we double check if everything is correct and upload it to ITR
+    
