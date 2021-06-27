@@ -5,6 +5,7 @@
   - if the ITR numbers are blank then we don't add them to the list of changes
 - Use mapping instead of array indexing
 - Add sql removal and addiiton of other records and etc
+-   Stop using lists(like the way data is placed linearly) we should use more of a better system of getting the values and comparing them. 
 ## Process:
 - Downloads the files from google drive
   - If need be update the file_id to get the proper file from the "Junk" folder from google drive
